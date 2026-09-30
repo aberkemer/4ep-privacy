@@ -34,7 +34,7 @@
 </head>
 <body>
 <h1>Privacy Policy — 4EP Approvals</h1>
-<p><strong>Last updated: 31 August 2026</strong></p>
+<p><strong>Last updated: 30 September 2026</strong></p>
 <p>4EP Approvals is an app for documenting and controlling the approval of purchase requests, purchase orders, invoices and contracts using the four-eyes principle. This policy explains what the app stores, why, and what control you have over it. It covers both the iOS app and the web app at the same address.</p>
 <h2>Who is responsible</h2>
 <p>4EP Approvals is provided by Alexander Berkemer, Darmstadt, Germany, as a free, non-commercial project.</p>
@@ -42,6 +42,7 @@
 <p>Enquiries are answered by email. If you need a postal address for a formal legal request, ask by email and one will be provided.</p>
 <h2>What the app stores</h2>
 <p><strong>Account information.</strong> Your name, email address and a member ID that is generated when you register. This identifies you to the other members of your organization and attributes the approval decisions you make.</p>
+<p><strong>Sign-in with Google or Apple.</strong> In the web app you can sign in with your Google or Apple account instead of a password. If you do, Google or Apple tells us your name, your email address and an account identifier; we do not receive your password or any other data from those accounts, and we do not grant them access to anything in 4EP Approvals. With Apple you may choose to hide your email address, in which case we receive an Apple relay address instead. Signing in this way is optional — an email address and password work just as well.</p>
 <p><strong>Requests you create.</strong> The description, vendor or payee, amount and currency of each request, plus any photo or PDF you attach to it.</p>
 <p><strong>Approval records.</strong> Every submission, approval, rejection, return, withdrawal and payment, together with who performed it and when. These records are the purpose of the app: a four-eyes approval process is only meaningful if it produces an accurate, tamper-resistant history.</p>
 <p><strong>Organization membership.</strong> Which organizations you belong to and the role you hold in each.</p>
@@ -56,7 +57,10 @@
 </ul>
 <h2>Where the data is stored</h2>
 <p>Data is stored using <strong>Supabase</strong> (Postgres database, authentication and file storage), which acts as our data processor. Attachments are held in private storage that requires an authenticated request to access. Communication between the app and the server is encrypted with HTTPS.</p>
-<p>Push notifications are delivered through the <strong>Apple Push Notification service</strong> on iOS, or the <strong>W3C Web Push standard</strong> in a browser. Only the request reference, type and status are included in a notification — never amounts or attachments.</p>
+<p>If you choose to sign in with Google or Apple, that sign-in is handled by <strong>Google</strong> (Google Ireland Limited) or <strong>Apple</strong> (Apple Distribution International Ltd.) under their own privacy policies; they learn that you signed in to 4EP Approvals.</p>
+<p>Push notifications are delivered through the <strong>Apple Push Notification service</strong> on iOS, or the <strong>W3C Web Push standard</strong> in a browser. A notification contains the request's description, reference, type and what happened to it, plus the text of a note or return comment where there is one — never attachments.</p>
+<p>Emails are sent through <strong>Brevo</strong> (Sendinblue SAS, France): the optional email when a request awaits your approval (which you switch on yourself under Account), and — if an administrator of your organization sets it up — archive emails with request records, their attachments and audit-log extracts to addresses your organization chooses.</p>
+<p>The web app is hosted on <strong>Cloudflare Pages</strong>, which processes your IP address to deliver the site.</p>
 <h2>Who can see your data</h2>
 <p>Only members of the same organization. Access is enforced by row-level security in the database, not just in the app, so a member of one organization cannot read another organization's records. Within an organization, what you can see and do depends on your role.</p>
 <h2>Legal basis and retention (GDPR)</h2>
